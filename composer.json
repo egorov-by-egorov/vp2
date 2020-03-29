@@ -1,0 +1,16 @@
+{
+    "name": "egorov/graduation_project-2",
+    "require": {
+        "intervention/image": "^2.5",
+        "fzaninotto/faker": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "Controller\\": "app/Controller",
+            "Model\\": "app/Model",
+            "View\\": "app/View"
+        }
+    }
+
+}
