@@ -33,10 +33,12 @@
                     throw new Exception('method ' . $action . ' not found in ' . $controller);
                 }
 
-                $tpl = '../app/View/' . $controller . "/" . $action . ".phtml";
+                $obj->$action();
 
-                $obj->view = new View();
-                $obj->$action($tpl);
+                $tpl = '../app/View/' . $controller . "/" . $action . ".phtml";
+                $view = new View();
+                $obj->view = $view;
+                $obj->view->render($tpl, $obj);
 
             } catch (Exception $e) {
                 header('HTTP/1.0 404 Not Found');

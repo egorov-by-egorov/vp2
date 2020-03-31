@@ -2,7 +2,7 @@
 
 
     namespace Model;
-    use core\DB;
+    use Core\DB;
 
     class UserModel
     {
